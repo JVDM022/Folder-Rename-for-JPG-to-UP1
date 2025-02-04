@@ -2,59 +2,50 @@ import os
 import shutil
 import re
 
-#check - A
-#sort files - B
-#set variables like for mapping -C
-#go through every files-D
-#rename and copy files -E
+def rename_and_copy_files(src_dir, dest_dir, prefix, new_dest_name):
+    # Create renamed destination folder inside dest_dir
+    final_dest_folder = os.path.join(dest_dir, new_dest_name)
+    if not os.path.exists(final_dest_folder):
+        os.makedirs(final_dest_folder)
 
-def rename_and_copy_files(src_dir, dest_dir):
-    if not os.path.exists(dest_dir):
-        os.makedirs(dest_dir)
-    # A
+    # Compile regex pattern dynamically based on the prefix
+    pattern = re.compile(rf'{re.escape(prefix)}_x(\d+)y(\d+)')
 
-    pattern = re.compile(r'{prefix}_x(\d+)y(\d+)')
-    files = sorted (os.listdir(src_dir))
-    # B
+    files = sorted(os.listdir(src_dir))
 
-    x_dist = 0
-    x_counter = {}
-    prev_x_val = None
-    y_counter = 0
-    # C
+    x_dist = {}  # Dictionary to map old x values to new ones
+    x_counter = 0
+    y_counters = {}  # Separate y counter for each x value
 
     for filename in files:
         match = pattern.match(filename)
         if match:
-            x_val, y_val = match.groups()
-            x_val = int(x_val)
-            y_val = int(y_val)
+            x_val, y_val = map(int, match.groups())
 
             if x_val not in x_dist:
-                x_dist[x_val] =  x_counter
-                x_counter += 1 
-                # D1
-                y_counter = 0
-            
-            new_x = x_dist[x_val]
-            new_y = y_counter
-            y_counter += 1
+                x_dist[x_val] = x_counter
+                x_counter += 1
+                y_counters[x_val] = 0  # Reset y counter for new x value
 
-            new_filename = f'{new_x}_x{new_y}y{os.path.splitext(filename)[1]}'
-            # D
+            new_x = x_dist[x_val]
+            new_y = y_counters[x_val]
+            y_counters[x_val] += 1
+
+            ext = os.path.splitext(filename)[1]  # Preserve original extension
+            new_filename = f"{new_x}_x{new_y}{ext}"
 
             src_path = os.path.join(src_dir, filename)
-            dest_path = os.path.join(dest_dir, new_filename)
+            dest_path = os.path.join(final_dest_folder, new_filename)
 
             shutil.copy2(src_path, dest_path)
-            # E
             print(f"Copied and renamed {src_path} -> {dest_path}")
 
-        print("Done")
+    print("✅ Done! Files copied to:", final_dest_folder)
 
+# User input
 src_dir = input("Enter the source directory: ")
 dest_dir = input("Enter the destination directory: ")
-prefix = input("Enter the prefix: ")
+prefix = input("Enter the prefix from filenames: ")
+new_dest_name = input("Enter the new destination folder name: ")
 
-rename_and_copy_files(src_dir, dest_dir, prefix)
-
+rename_and_copy_files(src_dir, dest_dir, prefix, new_dest_name)
