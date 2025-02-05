@@ -1,3 +1,5 @@
-python and CPP script
+python script
 python for macs
-and CPP for windows
+and exe file
+
+v2 with file selecting coming soon
