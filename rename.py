@@ -45,7 +45,6 @@ def rename_and_copy_files(src_dir, dest_dir, prefix, new_dest_name):
 # User input
 src_dir = input("Enter the source directory: ")
 dest_dir = input("Enter the destination directory: ")
-prefix = input("Enter the prefix from filenames: ")
 new_dest_name = input("Enter the new destination folder name: ")
 
 rename_and_copy_files(src_dir, dest_dir, prefix, new_dest_name)
