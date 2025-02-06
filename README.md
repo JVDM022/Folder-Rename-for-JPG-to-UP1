@@ -42,13 +42,13 @@
 - **Multi-threading Optimization**: Faster processing for large datasets.
 - **Porogress Bar for Large Folders**: Progress bar for copying/moving thousands of files in a folder.
 - **Excel**: Add Excel files for the all jpg files
-- **V3.2**
+-**V3.2**
 - **Optimization**: Further optmiziation
 - **save configuration**: store user preferences.
 - **Multithreading optimized**: Parallelize File Operations with Asynchronous Processing
 - **Undo/Restore**:  Create a log of files, and allow an undo operation.
 - **Independent exe**: Convert into a Fully Functional Windows EXE with GUI
-- **V3.3**
+-**V3.3**
 - **Memory Optimization**: Use efficient data structures to handle large datasets better
 - **Batch Processing**: Allow processing multiple folders in one go.
 ---
