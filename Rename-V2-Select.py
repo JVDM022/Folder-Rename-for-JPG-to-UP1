@@ -47,7 +47,7 @@ def rename_and_copy_files(src_dir, dest_dir, new_dest_name):
 
 
 def select_folder(title): # Function to select folder
-    root=tk.TK()
+    root=tk.Tk()
     root.withdraw()
     folder_selected = filedialog.askdirectory(title=title)
     return folder_selected
