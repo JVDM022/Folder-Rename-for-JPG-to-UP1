@@ -29,7 +29,3 @@
 2. Follow the steps outlined in the *Temporary Solution* if you encounter any bugs.
 
 ---
-
-## Contact
-
-For further inquiries or issues, please contact [your contact info].
