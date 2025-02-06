@@ -19,7 +19,7 @@
 
 ### **V3 (Projected Long-term Solution)**
 - **Current Work**: Actively working on V3.
-- **Projected Solution**: V3 will automatically sort the data and place any extra patterns into a subfolder, eliminating the need for manual adjustments.
+- **Projected Solution**: V3 will automatically sort the JPG and place needed ones into a subfolder and any extra patterns into another subfolder, eliminating the need for manual adjustments.
 
 ---
 
