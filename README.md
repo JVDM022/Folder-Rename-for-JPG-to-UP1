@@ -11,7 +11,7 @@
 ---
 
 ### **V1 (Archived Version)**
-- **Status**: The program is running locally.
+- **Status**: The program is functioning prperly.
 - **Drawback**: Requires manual input for the folder path.
 - **Note**: V1 is now archived and no longer actively maintained.
 
