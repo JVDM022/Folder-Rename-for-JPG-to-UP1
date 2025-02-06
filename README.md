@@ -11,15 +11,34 @@
 ---
 
 ### **V1 (Archived Version)**
-- **Status**: The program is functioning prperly.
+- **Status**: The program is functioning properly.
 - **Drawback**: Requires manual input for the folder path.
 - **Note**: V1 is now archived and no longer actively maintained.
 
 ---
 
 ### **V3 (Projected Long-term Solution)**
-- **Current Work**: Actively working on V3.
-- **Projected Solution**: V3 will automatically sort the JPG and place needed ones into a subfolder and any extra patterns into another subfolder, eliminating the need for manual adjustments.
+- **Current Work**: Source code has been already released, releasing the exe file soon.
+- **Updates/Features**: Sort the file into main and extra folders.
+
+---
+
+## Roadmap
+
+### ✅ **Completed**
+- Implemented an executable (V2).
+- Added automatic folder selection (GUI).
+- Organized files into `main` and `extra` folders.
+
+### 🔄 **In Progress**
+- Releasing the executable for **V3**.
+- Improving **file organization** to prevent SEM-induced glitches.
+- Enhancing **error handling** for unexpected file patterns.
+
+### 🚀 **Planned Features**
+- **Automated Bug Fixing**: Script will auto-adjust SEM uneven values.
+- **Better UI/UX**: User-friendly interface for non-technical users.
+- **Multi-threading Optimization**: Faster processing for large datasets.
 
 ---
 
