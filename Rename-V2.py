@@ -4,9 +4,9 @@ import re
 import tkinter as tk
 from tkinter import filedialog
 
-def rename_and_copy_files(src_dir, dest_dir, new_dest_name):
+def rename_and_copy_files(src_dir, dest_dir, new_name):
     # create a folder for reuslts
-    final_dest_folder = os.path.join(dest_dir, new_dest_name)
+    final_dest_folder = os.path.join(dest_dir, new_name)
     if not os.path.exists(final_dest_folder):
         os.makedirs(final_dest_folder)
 
@@ -15,9 +15,9 @@ def rename_and_copy_files(src_dir, dest_dir, new_dest_name):
 
     files = sorted(os.listdir(src_dir))
 
-    x_dist = {}  # Map x value to new x value
+    x_dist = {}  # Map x value
     x_counter = 0
-    y_counters = {}  # Separate y counter for each x value
+    y_counters = {}  # tie y to x
 
     for filename in files:
         match = pattern.match(filename)
@@ -46,13 +46,12 @@ def rename_and_copy_files(src_dir, dest_dir, new_dest_name):
     print("✅ Done! Files copied to:", final_dest_folder)
 
 
-def select_folder(title): # Function to select folder
+def select_folder(title):
     root=tk.Tk()
     root.withdraw()
     folder_selected = filedialog.askdirectory(title=title)
     return folder_selected
 
-# User input
 src_dir = select_folder("Select the source directory")
 dest_dir = select_folder("Select the destination directory")
 new_dest_name = input("Enter the new destination folder name: ")
