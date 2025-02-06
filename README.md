@@ -33,7 +33,7 @@
 ### 🔄 **In Progress**
 - Releasing the executable for **V3**.
 - Improving **file organization** to prevent repack software-induced glitches.
-- Enhancing **error handling** for unexpected file patterns, including dynamically recognize the file format.
+- Enhancing **error handling** for unexpected file patterns, including dynamically recognize the folder structure.
 
 ### 🚀 **Planned Features**
 -**V3.1**
