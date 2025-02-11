@@ -2,7 +2,7 @@
 
 ## Version Updates
 
-### **V3.3 (Latest Version - Achieved)**
+### **V3.3 (Latest Version )**
 
 - **Status**: The executable (exe) file is functioning properly.
 - **New Features**:
@@ -14,7 +14,7 @@
 
 ---
 
-### **V3.2 (Previously Achieved)**
+### **V3.2 (Archived Version)**
 
 - **Optimization**: Improved performance and faster file processing.
 - **Save Configuration**: Stores user preferences for future sessions.
@@ -24,7 +24,7 @@
 
 ---
 
-### **V3.1 (Previously Achieved)**
+### **V3.1 (Archived Version)**
 
 - **Automated Bug Fixing**: Script auto-adjusts SEM uneven values.
 - **Better UI/UX**: Enhanced usability for non-technical users.
