@@ -2,62 +2,74 @@
 
 ## Version Updates
 
-### **V2 (Latest Version)**
+### **V3.3 (Latest Version - Achieved)**
+
 - **Status**: The executable (exe) file is functioning properly.
-- **Known Bug**:
-  - Due to SEM generating an uneven number of y-values, repack files may experience glitches.
-  - **Temporary Solution**: Manually remove certain patterns to ensure even x and y values. For example, ensure that all the maximum y-values for each x-value are the same (e.g., `x1y100`, `x2y100`, `x3y100`, etc.).
+- **New Features**:
+  - **Excel Integration**: Generates an Excel file to highlight extra files for user review.
+  - **Extra File Management**: Users can choose to move extra files after reviewing the Excel sheet.
+  - **File Editing Option**: Allows users to modify files before moving them to the extra folder.
+  - **Performance Optimization**: Improved startup speed and memory efficiency.
+  - **Terminal Removed**: Fully GUI-based application with no dependency on the terminal.
 
 ---
 
-### **V1 (Archived Version)**
-- **Status**: The program is functioning properly.
-- **Drawback**: Requires manual input for the folder path.
-- **Note**: V1 is now archived and no longer actively maintained.
+### **V3.2 (Previously Achieved)**
+
+- **Optimization**: Improved performance and faster file processing.
+- **Save Configuration**: Stores user preferences for future sessions.
+- **Multithreading Optimized**: Improved parallel file operations.
+- **Undo/Restore Feature**: Logs file movements, allowing users to revert changes.
+- **Independent EXE**: Fully functional Windows EXE with a GUI.
 
 ---
 
-### **V3 (Projected Long-term Solution)**
-- **Current Work**: Source code has been already released, releasing the exe file soon.
-- **Updates/Features**: Sort the file into main and extra folders.
+### **V3.1 (Previously Achieved)**
+
+- **Automated Bug Fixing**: Script auto-adjusts SEM uneven values.
+- **Better UI/UX**: Enhanced usability for non-technical users.
+- **Multithreading**: Faster processing for large datasets.
+- **Progress Bar for Large Folders**: Visual feedback for file operations.
+- **Excel Export**: Generates an Excel file listing all processed files.
+
+---
+
+### **V3 (Archived Version)**
+
+- **Status**: The source code was released, followed by an EXE release.
+- **Features**: Automatic sorting of files into main and extra folders.
 
 ---
 
 ## Roadmap
 
 ### ✅ **Completed**
-- Implemented an executable (V2).
-- Added automatic folder selection (GUI).
-- Organized files into `main` and `extra` folders.
 
-### 🔄 **In Progress**
-- Releasing the executable for **V3**.
-- Improving **file organization** to prevent repack software-induced glitches.
-- Enhancing **error handling** for unexpected file patterns, including dynamically recognize the folder structure.
+- Implemented an executable (V3.3).
+- Removed terminal dependency for a full GUI experience.
+- Added an Excel file to highlight extra files before moving.
+- Allowed user review and editing before moving extra files.
+- Optimized software startup time and performance.
 
 ### 🚀 **Planned Features**
--**V3.1**
-- **Automated Bug Fixing**: Script will auto-adjust SEM uneven values.
-- **Better UI/UX**: User-friendly interface for non-technical users.
-- **Multi-threading Optimization**: Faster processing for large datasets.
-- **Porogress Bar for Large Folders**: Progress bar for copying/moving thousands of files in a folder.
-- **Excel**: Add Excel files for the all jpg files
 
--**V3.2**
-- **Optimization**: Further optmiziation
-- **save configuration**: store user preferences.
-- **Multithreading optimized**: Parallelize File Operations with Asynchronous Processing
-- **Undo/Restore**:  Create a log of files, and allow an undo operation.
-- **Independent exe**: Convert into a Fully Functional Windows EXE with GUI
-
--**V3.3**
-- **Memory Optimization**: Use efficient data structures to handle large datasets better
+- **Parallel Processing**: Enhance speed by processing multiple files simultaneously.
+- **Memory Optimization**: Use efficient data structures to handle large datasets better.
 - **Batch Processing**: Allow processing multiple folders in one go.
+- **Further UI/UX Enhancements**: Improve user experience for seamless interaction.
+- **Advanced Configuration Settings**: More customization options for power users.
+
 ---
 
 ## How to Use
 
-1. Download the **V2 exe** file and run it locally.
-2. Follow the steps outlined in the *Temporary Solution* if you encounter any bugs.
+1. Download the **V3.3 exe** file and run it locally.
+2. Select the source and destination folders.
+3. Process the files and review the Excel sheet.
+4. Decide whether to move extra files or keep them as-is.
+5. (Optional) Edit files before finalizing the move.
+
+
 
 ---
+
