@@ -28,6 +28,7 @@ class FileProcessor(QThread):
         x_dist = {}
         y_counts = {}
         extra_files = []
+        excel_data = []
 
         for filename in files:
             match = pattern.match(filename)
@@ -43,8 +44,6 @@ class FileProcessor(QThread):
                 y_counts[x_val].append(y_val)
 
         max_y = max(len(y_vals) for y_vals in y_counts.values())
-
-        excel_data = []
 
         for filename in files:
             match = pattern.match(filename)
@@ -67,8 +66,13 @@ class FileProcessor(QThread):
 
             self.progress.emit(int((files.index(filename) + 1) / len(files) * 100))
 
-        df = pd.DataFrame(excel_data, columns=["Prefix", "Old X", "Old Y", "New X", "New Y", "New Path"])
-        df.to_excel(os.path.join(self.dest_dir, "file_mapping.xlsx"), index=False)
+        if excel_data:
+            df = pd.DataFrame(excel_data, columns=["Prefix", "Old X", "Old Y", "New X", "New Y", "New Path"])
+            excel_path = os.path.join(self.dest_dir, "file_mapping.xlsx")
+            print(f"Saving Excel file to: {excel_path}")
+            df.to_excel(excel_path, index=False, engine='openpyxl')
+        else:
+            print("No data collected for Excel file.")
 
         self.finished.emit(extra_files)
 
