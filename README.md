@@ -2,7 +2,7 @@
 
 ## Version Updates
 
-### **V3.3 (Latest Version )**
+### **V3.3 (Latest Version)**
 
 - **Status**: The executable (exe) file is functioning properly.
 - **New Features**:
